@@ -1,19 +1,22 @@
 import {Options, Vue} from 'vue-class-component';
 import Checkbox from '@/components/checkbox/checkbox.vue';
-import Select from '@/components/select/select.vue';
-import {Option} from '@/components/select/select';
 import {
     NAVBAR_DARK_VARIANTS,
     NAVBAR_LIGHT_VARIANTS,
     SIDEBAR_DARK_SKINS,
     SIDEBAR_LIGHT_SKINS
 } from '@/utils/themes';
+import {PfSelect} from '@profabric/vue-components';
+export interface Option {
+    label: string;
+    value: string | number;
+}
 
 @Options({
     name: 'app-control-sidebar',
     components: {
         'app-checkbox': Checkbox,
-        'app-select': Select
+        'pf-select': PfSelect
     }
 })
 export default class ControlSidebar extends Vue {
