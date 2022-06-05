@@ -11,6 +11,7 @@ import {Gatekeeper} from 'gatekeeper-client-sdk';
 import Toast, {PluginOptions} from 'vue-toastification';
 import {createI18n} from 'vue-i18n';
 import {VueWindowSizePlugin} from 'vue-window-size/option-api';
+import {PfButton} from '@profabric/vue-components';
 
 import en from './translation/en.json';
 import es from './translation/es.json';
