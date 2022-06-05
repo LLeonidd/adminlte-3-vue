@@ -40,7 +40,7 @@
                     </div>
                     <!-- /.col -->
                     <div class="col-5">
-                        <app-button
+                        <pf-button
                             class="btn-primary"
                             type="submit"
                             block="true"
@@ -48,14 +48,14 @@
                             :disabled="isFacebookLoading || isGoogleLoading"
                         >
                             {{ $t("labels.register") }}
-                        </app-button>
+                        </pf-button>
                     </div>
                     <!-- /.col -->
                 </div>
             </form>
 
             <div class="social-auth-links text-center">
-                <app-button
+                <pf-button
                     class="btn-primary"
                     icon="facebook"
                     block="true"
@@ -64,8 +64,8 @@
                     :disabled="isAuthLoading || isGoogleLoading"
                 >
                     {{ $t("labels.signUpUsingFB") }}
-                </app-button>
-                <app-button
+                </pf-button>
+                <pf-button
                     class="btn-danger"
                     icon="google-plus"
                     block="true"
@@ -74,7 +74,7 @@
                     :disabled="isAuthLoading || isFacebookLoading"
                 >
                     {{ $t("labels.signUpUsingGoogle") }}
-                </app-button>
+                </pf-button>
             </div>
 
             <router-link to="/login" class="text-center">

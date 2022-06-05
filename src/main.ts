@@ -11,7 +11,6 @@ import {Gatekeeper} from 'gatekeeper-client-sdk';
 import Toast, {PluginOptions} from 'vue-toastification';
 import {createI18n} from 'vue-i18n';
 import {VueWindowSizePlugin} from 'vue-window-size/option-api';
-import {PfButton} from '@profabric/vue-components';
 
 import en from './translation/en.json';
 import es from './translation/es.json';
@@ -21,6 +20,12 @@ import './index.scss';
 library.add(faLock, faEnvelope, faFacebook, faGooglePlus);
 
 Gatekeeper.initialize('de378d9c-38c8-42c1-b961-9e4fa92d6a5e');
+
+(window as any).PF = {
+    config: {
+        mode: 'bs4'
+    }
+};
 
 const options: PluginOptions = {
     timeout: 5000,

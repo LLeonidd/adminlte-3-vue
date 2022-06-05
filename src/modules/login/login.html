@@ -37,7 +37,6 @@
                     <!-- /.col -->
                     <div class="col-5">
                         <pf-button
-                            class="btn-primary"
                             type="submit"
                             block="true"
                             :loading="isAuthLoading"
@@ -51,26 +50,28 @@
             </form>
 
             <div class="social-auth-links text-center mt-2 mb-3">
-                <app-button
-                    class="btn-primary"
+                <pf-button
+                    class="mb-2"
                     icon="facebook"
                     block="true"
                     @click="loginByFacebook"
                     :loading="isFacebookLoading"
                     :disabled="isAuthLoading || isGoogleLoading"
                 >
+                    <i className="fab fa-facebook mr-2" />
                     {{ $t("labels.signInUsingFB") }}
-                </app-button>
-                <app-button
-                    class="btn-danger"
+                </pf-button>
+                <pf-button
                     icon="google-plus"
+                    theme="danger"
                     block="true"
                     @click="loginByGoogle"
                     :loading="isGoogleLoading"
                     :disabled="isAuthLoading || isFacebookLoading"
                 >
+                    <i className="fab fa-google mr-2" />
                     {{ $t("labels.SignInUsingGoogle") }}
-                </app-button>
+                </pf-button>
             </div>
             <!-- /.social-auth-links -->
 
