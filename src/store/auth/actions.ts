@@ -6,7 +6,7 @@ export default {
         context.commit('setToken', payload);
         router.replace('/');
     },
-    getUser: (context: any, payload: IUser): void => {
+    setUser: (context: any, payload: IUser): void => {
         context.commit('setUser', payload);
     },
     logout: (context: any): void => {
